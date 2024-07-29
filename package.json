@@ -1,0 +1,31 @@
+{
+  "name": "@hes/cconf-app",
+  "version": "1.0.0",
+  "description": "Centre de configuració",
+  "author": "UXLand <dev@uxland.es>",
+  "homepage": "https://github.com/uxland/hes-cconf-app#readme",
+  "license": "UNLICENSED",
+  "main": "index.ts",
+  "types": "lib/index.d.ts",
+  "files": ["lib", "es", "dist"],
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uxland/hes-cconf-app.git"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "bugs": {
+    "url": "https://github.com/uxland/hes-cconf-app/issues"
+  },
+  "dependencies": {
+    "@uxland/hes-cconf-shell": "^0.1.1",
+    "lit": "^3.1.0",
+    "vite": "^5.2.8"
+  }
+}
