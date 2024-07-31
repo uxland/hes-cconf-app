@@ -1,5 +1,4 @@
-//import "reflect-metadata";
-//import "@uxland/primary-shell/dist/style.css";
+import "@uxland/hes-cconf-shell/dist/style.css";
 import { bootstrapPlugins, initializeShell,hesCConfApiFactory } from "@uxland/hes-cconf-shell";
 import { getConfigurationsAndPlugins } from "./app/get-configurations";
 

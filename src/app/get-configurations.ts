@@ -27,7 +27,7 @@ export const fetchConfigurations = () => {
             name: "Notificacions",
             description: "Configuració i manteniment de notificacions i alertes",
             icon: "notification",
-            tags: ["configurations"],
+            tags: ["configurations"], //per la cerca amb el cercador
             plugins: [
                 {
                     pluginId: "patient-notifications",
