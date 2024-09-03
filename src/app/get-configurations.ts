@@ -27,17 +27,18 @@ export const fetchConfigurations = () => {
             name: "Notificacions",
             description: "Configuració i manteniment de notificacions i alertes",
             icon: "notification",
-            tags: ["configurations"], //per la cerca amb el cercador
             plugins: [
                 {
                     pluginId: "patient-notifications",
                     pluginUrl: "",
-                    name: "Notificacions del pacient",
+                name: "Notificacions del pacient",
+                    category: ["user", "admin"]
                 },
                 {
                     pluginId: "professional-notifications",
                     pluginUrl: "",
-                    name: "Notificacions del professional",
+                  name: "Notificacions del professional",
+                    category: ["user", "admin"]
                 },
             ],
         },
@@ -46,12 +47,12 @@ export const fetchConfigurations = () => {
             name: "Gestió d'usuari",
             description: "Configuració de les teves dades i connexions",
             icon: "user",
-            tags: ["user", "configurations"],
             plugins: [
                 {
                     pluginId: "user-administrative-data",
                     pluginUrl: "",
-                    name: "Dades administratives de l'usuari",
+                name: "Dades administratives de l'usuari",
+                    category: ["user"]
                 },
             ],
         },

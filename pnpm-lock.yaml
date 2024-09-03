@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@uxland/hes-cconf-shell':
-        specifier: ^0.3.0
-        version: 0.3.0
+        specifier: ^0.6.1
+        version: 0.6.1
       lit:
         specifier: ^3.1.0
         version: 3.1.4
@@ -270,8 +270,8 @@ packages:
   '@uxland/harmonix@1.0.18':
     resolution: {integrity: sha512-VeXI6ebrG3vxH6H6JXMkFGWS7bvY7lpu80daj6fxaPo9fbLyWc4O5TG7EDjnni3jPOzJtnhsXrrfFthOEE5tug==}
 
-  '@uxland/hes-cconf-shell@0.3.0':
-    resolution: {integrity: sha512-Ki+cJvCjaFQjP7ZDab6KMDF0SoUKBfVvfTtJZLAtH+xWulubKFNl/ua06L8GexxbWPnJKQJ0XhhdE5LL9jciHg==}
+  '@uxland/hes-cconf-shell@0.6.1':
+    resolution: {integrity: sha512-Tdv4MICTdR6S2WPcoj37FswVGwrZs6swuHR2VMHV6tLzkzOINhGz+cJNpdoxnaiQDk94BcBIrSEXXkkgL2PMwg==}
 
   '@uxland/lit-utilities@1.0.0':
     resolution: {integrity: sha512-zypSEO2tivQ8+OG3TTq5X/8BU1b09POnjS5S1K5PiWy4jnJzD9JwGEF3vX4btRMafBzIpzI4FiRbLiwR2lRTYA==}
@@ -349,6 +349,9 @@ packages:
   source-map-js@1.2.0:
     resolution: {integrity: sha512-itJW8lvSA0TXEphiRoawsCksnlf8SyvmFzIhltqAHluXd88pkCd+cXJVHTDwdCr0IzwptSm035IHQktUu1QUMg==}
     engines: {node: '>=0.10.0'}
+
+  tslib@2.7.0:
+    resolution: {integrity: sha512-gLXCKdN1/j47AiHiOkJN69hJmcbGTHI0ImLmbYLHykhgeN0jVGola9yVjFgzCUklsZQMW55o+dW7IXv3RCXDzA==}
 
   vite@5.3.5:
     resolution: {integrity: sha512-MdjglKR6AQXQb9JGiS7Rc2wC6uMjcm7Go/NHNO63EwiJXfuk9PgqiP/n5IDJCziMkfw9n4Ubp7lttNwz+8ZVKA==}
@@ -528,12 +531,13 @@ snapshots:
       '@uxland/regions': 1.0.0
       lit: 3.1.4
 
-  '@uxland/hes-cconf-shell@0.3.0':
+  '@uxland/hes-cconf-shell@0.6.1':
     dependencies:
       '@uxland/harmonix': 1.0.18
       '@uxland/localization': 1.0.6
       '@uxland/regions': 1.0.0
       lit: 3.1.4
+      tslib: 2.7.0
 
   '@uxland/lit-utilities@1.0.0':
     dependencies:
@@ -671,6 +675,8 @@ snapshots:
       fsevents: 2.3.3
 
   source-map-js@1.2.0: {}
+
+  tslib@2.7.0: {}
 
   vite@5.3.5:
     dependencies:
