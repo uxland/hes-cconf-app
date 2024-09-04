@@ -1,5 +1,12 @@
 import {IHESCConfSection,PluginDefinition} from "@uxland/hes-cconf-shell";
+import { configurationsMock } from "./configurations-mock";
 
+
+  /**
+   * Given an array of configuration sections, it will return an array of PluginDefinition
+   * @param configurationSections an array of configuration sections
+   * @returns an array of PluginDefinition
+   */
 const buildHarmonixPlugins = (configurationSections: IHESCConfSection[]) => { 
   const plugins = configurationSections
     .map((c) => c.plugins)
@@ -13,6 +20,10 @@ const buildHarmonixPlugins = (configurationSections: IHESCConfSection[]) => {
   return plugins;
 }
 
+  /**
+   * Fetches the configuration sections and builds the plugins.
+   * @returns A promise that resolves with an object containing the configuration sections and the plugins.
+   */
 export const getConfigurationsAndPlugins = async () => {
   const configurationSections = await fetchConfigurations();
   const plugins = buildHarmonixPlugins(configurationSections) as PluginDefinition[];
@@ -20,41 +31,10 @@ export const getConfigurationsAndPlugins = async () => {
 };
 
 
+  /**
+   * Fetches the configuration sections from the server. Right now, it only returns a mock.
+   * @returns A promise that resolves with the configuration sections.
+   */
 export const fetchConfigurations = () => {
-    return Promise.resolve([
-        {
-            id: "notifications",
-            name: "Notificacions",
-            description: "Configuració i manteniment de notificacions i alertes",
-            icon: "notification",
-            plugins: [
-                {
-                    pluginId: "patient-notifications",
-                    pluginUrl: "",
-                name: "Notificacions del pacient",
-                    category: ["user", "admin"]
-                },
-                {
-                    pluginId: "professional-notifications",
-                    pluginUrl: "",
-                  name: "Notificacions del professional",
-                    category: ["user", "admin"]
-                },
-            ],
-        },
-        {
-            id: "user-management",
-            name: "Gestió d'usuari",
-            description: "Configuració de les teves dades i connexions",
-            icon: "user",
-            plugins: [
-                {
-                    pluginId: "user-administrative-data",
-                    pluginUrl: "",
-                name: "Dades administratives de l'usuari",
-                    category: ["user"]
-                },
-            ],
-        },
-    ]);
+    return Promise.resolve(configurationsMock);
 }
